@@ -12,6 +12,10 @@
 		041C55462B1E49AC00B5BBC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C55452B1E49AC00B5BBC5 /* ViewController.swift */; };
 		041C554B2B1E49AE00B5BBC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041C554A2B1E49AE00B5BBC5 /* Assets.xcassets */; };
 		041C554E2B1E49AE00B5BBC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041C554C2B1E49AE00B5BBC5 /* LaunchScreen.storyboard */; };
+		041C55592B1E525D00B5BBC5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 041C55582B1E525D00B5BBC5 /* SnapKit */; };
+		041C555B2B1E525D00B5BBC5 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 041C555A2B1E525D00B5BBC5 /* SnapKit-Dynamic */; };
+		04A3CF2F2B22103B00928791 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3CF2E2B22103B00928791 /* R.generated.swift */; };
+		DA89AA9EB601542B70EFFA10 /* Pods_WorkTimerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F1492850E5EBF0733A4099 /* Pods_WorkTimerApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		041C554A2B1E49AE00B5BBC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		041C554D2B1E49AE00B5BBC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		041C554F2B1E49AE00B5BBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04A3CF2E2B22103B00928791 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		56F1492850E5EBF0733A4099 /* Pods_WorkTimerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkTimerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5D8714B7B74AE2701289B1 /* Pods-WorkTimerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkTimerApp.release.xcconfig"; path = "Target Support Files/Pods-WorkTimerApp/Pods-WorkTimerApp.release.xcconfig"; sourceTree = "<group>"; };
+		EEA24613C4153A8B8F9FFDFB /* Pods-WorkTimerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkTimerApp.debug.xcconfig"; path = "Target Support Files/Pods-WorkTimerApp/Pods-WorkTimerApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041C55592B1E525D00B5BBC5 /* SnapKit in Frameworks */,
+				041C555B2B1E525D00B5BBC5 /* SnapKit-Dynamic in Frameworks */,
+				DA89AA9EB601542B70EFFA10 /* Pods_WorkTimerApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				041C55402B1E49AC00B5BBC5 /* WorkTimerApp */,
 				041C553F2B1E49AC00B5BBC5 /* Products */,
+				443A11120031CA7E6D1C22CD /* Pods */,
+				3CE41518343076C7791BD8D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +67,7 @@
 		041C55402B1E49AC00B5BBC5 /* WorkTimerApp */ = {
 			isa = PBXGroup;
 			children = (
+				04C023652B22066700D3E28E /* Resources */,
 				041C55562B1E4A4A00B5BBC5 /* Application */,
 				041C55552B1E4A2700B5BBC5 /* SupportingFiles */,
 				041C55452B1E49AC00B5BBC5 /* ViewController.swift */,
@@ -80,6 +94,39 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		04A3CF2D2B220B5500928791 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				04A3CF2E2B22103B00928791 /* R.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		04C023652B22066700D3E28E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04A3CF2D2B220B5500928791 /* Generated */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3CE41518343076C7791BD8D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56F1492850E5EBF0733A4099 /* Pods_WorkTimerApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		443A11120031CA7E6D1C22CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EEA24613C4153A8B8F9FFDFB /* Pods-WorkTimerApp.debug.xcconfig */,
+				BE5D8714B7B74AE2701289B1 /* Pods-WorkTimerApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,15 +134,22 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 041C55522B1E49AE00B5BBC5 /* Build configuration list for PBXNativeTarget "WorkTimerApp" */;
 			buildPhases = (
+				0CD6B166EF5081F19D0E0D47 /* [CP] Check Pods Manifest.lock */,
 				041C553A2B1E49AC00B5BBC5 /* Sources */,
 				041C553B2B1E49AC00B5BBC5 /* Frameworks */,
 				041C553C2B1E49AC00B5BBC5 /* Resources */,
+				03BF630DBCAF0D8A57F5D9EB /* [CP] Embed Pods Frameworks */,
+				04A3CF2C2B220B2700928791 /* R.Generate */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = WorkTimerApp;
+			packageProductDependencies = (
+				041C55582B1E525D00B5BBC5 /* SnapKit */,
+				041C555A2B1E525D00B5BBC5 /* SnapKit-Dynamic */,
+			);
 			productName = WorkTimerApp;
 			productReference = 041C553E2B1E49AC00B5BBC5 /* WorkTimerApp.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +178,9 @@
 				Base,
 			);
 			mainGroup = 041C55352B1E49AC00B5BBC5;
+			packageReferences = (
+				041C55572B1E525D00B5BBC5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 041C553F2B1E49AC00B5BBC5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,6 +202,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03BF630DBCAF0D8A57F5D9EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorkTimerApp/Pods-WorkTimerApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorkTimerApp/Pods-WorkTimerApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorkTimerApp/Pods-WorkTimerApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		04A3CF2C2B220B2700928791 /* R.Generate */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"",
+			);
+			inputPaths = (
+			);
+			name = R.Generate;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/WorkTimerApp/Resources/Generated/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/WorkTimerApp/Resources/Generated/R.generated.swift\"\n";
+		};
+		0CD6B166EF5081F19D0E0D47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WorkTimerApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		041C553A2B1E49AC00B5BBC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -153,6 +273,7 @@
 				041C55462B1E49AC00B5BBC5 /* ViewController.swift in Sources */,
 				041C55422B1E49AC00B5BBC5 /* AppDelegate.swift in Sources */,
 				041C55442B1E49AC00B5BBC5 /* SceneDelegate.swift in Sources */,
+				04A3CF2F2B22103B00928791 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +328,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -271,7 +392,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -293,6 +414,7 @@
 		};
 		041C55532B1E49AE00B5BBC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEA24613C4153A8B8F9FFDFB /* Pods-WorkTimerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,6 +442,7 @@
 		};
 		041C55542B1E49AE00B5BBC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE5D8714B7B74AE2701289B1 /* Pods-WorkTimerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -367,6 +490,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		041C55572B1E525D00B5BBC5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		041C55582B1E525D00B5BBC5 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041C55572B1E525D00B5BBC5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		041C555A2B1E525D00B5BBC5 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041C55572B1E525D00B5BBC5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 041C55362B1E49AC00B5BBC5 /* Project object */;
 }
