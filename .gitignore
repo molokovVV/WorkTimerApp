@@ -30,6 +30,7 @@ DerivedData/
 !default.perspectivev3
 *.ipa
 *.xcuserstate
+*.generated.swift
 
 ### Xcode Patch
 
