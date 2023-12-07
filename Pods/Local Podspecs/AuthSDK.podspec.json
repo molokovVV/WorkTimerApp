@@ -1,0 +1,28 @@
+{
+  "name": "AuthSDK",
+  "version": "0.0.1",
+  "summary": "totally awesome stuff",
+  "description": "more details about the totally awesome stuff, if only it worked :(",
+  "homepage": "https://awesomestuff.com",
+  "license": "MIT",
+  "authors": {
+    "Me": "me@awesomestuff.com"
+  },
+  "source": {
+    "git": "https://awesome.com/awesome/my-custom-pod.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "17.0"
+  },
+  "source_files": "**/*.{swift,m,xib,storyboard}",
+  "resources": [
+    "Resources/*.{strings,xcassets,stringsdict}",
+    "Resources/**/*.{strings,stringsdicts}"
+  ],
+  "dependencies": {
+    "R.swift": [
+
+    ]
+  }
+}

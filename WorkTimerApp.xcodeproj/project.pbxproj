@@ -235,7 +235,6 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/WorkTimerApp/Resources/Generated/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
