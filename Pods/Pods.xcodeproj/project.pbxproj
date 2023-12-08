@@ -22,6 +22,7 @@
 /* Begin PBXBuildFile section */
 		00EB68FB55CC802096D3538475E837B9 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4AF14B3E36DDF91262EA45A9F8BEF /* Reusable.swift */; };
 		04A3CF822B23AB1E00928791 /* WTAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3CF812B23AB1E00928791 /* WTAuthTextField.swift */; };
+		04A3CF842B23AD7400928791 /* WTTitleSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3CF832B23AD7400928791 /* WTTitleSwitchView.swift */; };
 		068EB362DA58A5D7D472F14AF148E287 /* FileResource+Integrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD338543DB5A28FDBE3FA78A5E0184C0 /* FileResource+Integrations.swift */; };
 		068F233A63A7350937AE7D6B16F2E809 /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F369BAE8F4AF6636638D13484264F0 /* ConstraintLayoutGuide.swift */; };
 		0F7C5A4E1211B808325601B03EB5166A /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC08D0936634D97E2FCEF1BA24551F /* AuthViewModel.swift */; };
@@ -182,6 +183,7 @@
 /* Begin PBXFileReference section */
 		005C45B96C4BA2859301FF10EC9523D3 /* StoryboardReference.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardReference.swift; path = Sources/RswiftResources/Shared/StoryboardReference.swift; sourceTree = "<group>"; };
 		04A3CF812B23AB1E00928791 /* WTAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTAuthTextField.swift; sourceTree = "<group>"; };
+		04A3CF832B23AD7400928791 /* WTTitleSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTTitleSwitchView.swift; sourceTree = "<group>"; };
 		064BF6D80DF6FFDCEB1FB11B4D5CF02A /* StoryboardResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardResource.swift; path = Sources/RswiftResources/StoryboardResource.swift; sourceTree = "<group>"; };
 		06D94EAC8192D180F919D41A6C418523 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Sources/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		0D7365579FF61AF80FC9E08D9FBDE9BC /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
@@ -570,6 +572,7 @@
 			children = (
 				04A3CF802B23AA0700928791 /* Base */,
 				04A3CF812B23AB1E00928791 /* WTAuthTextField.swift */,
+				04A3CF832B23AD7400928791 /* WTTitleSwitchView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -880,6 +883,7 @@
 				A6DE00DC4439D349A063A57BA09F8064 /* BaseViewController.swift in Sources */,
 				04A3CF822B23AB1E00928791 /* WTAuthTextField.swift in Sources */,
 				D1C1AF021A383AEDF6889F2240E761B9 /* Constants.swift in Sources */,
+				04A3CF842B23AD7400928791 /* WTTitleSwitchView.swift in Sources */,
 				D6896ADAB21FF02FCBD86BFDBC5A8E70 /* UIComponents-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

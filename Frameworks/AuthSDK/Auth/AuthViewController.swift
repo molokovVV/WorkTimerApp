@@ -9,19 +9,10 @@ import UIKit
 import SnapKit
 import UIComponents
 
-fileprivate extension Constants {
-    static let horizontalOffset: CGFloat = 45
-    static let buttonDividerOffset: CGFloat = 5
-    static let interItemOffset: CGFloat = 58
-    static let fieldHeight: CGFloat = 28
-}
-
 public final class AuthViewController: BaseViewController {
     
     private let contentView = UIView()
-    private let loginTabButton = UIButton()
-    private let buttonDividerView = UILabel()
-    private let signUpTabButton = UIButton()
+    private let titleSwitchView = WTTitleSwitchView()
     private let userNameTextField = WTAuthTextField()
     private let passwordTextField = WTAuthTextField()
     private let loginButton = UIButton()
@@ -32,9 +23,7 @@ public final class AuthViewController: BaseViewController {
         view.backgroundColor = .white
         
         setupContentView()
-        setupLoginTabButton()
-        setupButtonDividerView()
-        setupLSignUpTabButton()
+        setupTitleSwitchView()
         setupLoginTextField()
         setupPasswordTextField()
         setupLoginButton()
@@ -52,38 +41,14 @@ private extension AuthViewController {
         }
     }
     
-    func setupLoginTabButton() {
-        contentView.addSubview(loginTabButton)
+    func setupTitleSwitchView() {
+        contentView.addSubview(titleSwitchView)
         
-        loginTabButton.setTitle("Login", for: .normal)
-        loginTabButton.setTitleColor(.black, for: .normal)
+        titleSwitchView.titles = ("Login", "Sign Up")
         
-        loginTabButton.snp.makeConstraints { make in
+        titleSwitchView.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.leading.equalToSuperview().inset(Constants.horizontalOffset)
-        }
-    }
-    
-    func setupButtonDividerView() {
-        contentView.addSubview(buttonDividerView)
-        
-        buttonDividerView.text = "/"
-        
-        buttonDividerView.snp.makeConstraints { make in
-            make.centerY.equalTo(loginTabButton)
-            make.leading.equalTo(loginTabButton.snp.trailing).offset(Constants.buttonDividerOffset)
-        }
-    }
-    
-    func setupLSignUpTabButton() {
-        contentView.addSubview(signUpTabButton)
-        
-        signUpTabButton.setTitle("Sign Up", for: .normal)
-        signUpTabButton.setTitleColor(.black, for: .normal)
-        
-        signUpTabButton.snp.makeConstraints { make in
-            make.bottom.equalTo(loginTabButton)
-            make.leading.equalTo(buttonDividerView.snp.trailing).offset(Constants.buttonDividerOffset)
+            make.leading.equalToSuperview().inset(45)
         }
     }
     
@@ -93,9 +58,9 @@ private extension AuthViewController {
         userNameTextField.placeholder = "Username"
         
         userNameTextField.snp.makeConstraints { make in
-            make.top.equalTo(loginTabButton.snp.bottom).offset(Constants.interItemOffset)
-            make.leading.equalToSuperview().inset(Constants.horizontalOffset)
-            make.height.equalTo(Constants.fieldHeight)
+            make.top.equalTo(titleSwitchView.snp.bottom).offset(58)
+            make.leading.equalToSuperview().inset(45)
+            make.height.equalTo(28)
         }
     }
     
@@ -105,9 +70,9 @@ private extension AuthViewController {
         passwordTextField.placeholder = "password"
         
         passwordTextField.snp.makeConstraints { make in
-            make.top.equalTo(userNameTextField.snp.bottom).offset(Constants.interItemOffset)
-            make.leading.equalToSuperview().inset(Constants.horizontalOffset)
-            make.height.equalTo(Constants.fieldHeight)
+            make.top.equalTo(userNameTextField.snp.bottom).offset(58)
+            make.leading.equalToSuperview().inset(45)
+            make.height.equalTo(28)
         }
     }
     
@@ -118,8 +83,8 @@ private extension AuthViewController {
         loginButton.backgroundColor = .blue
         
         loginButton.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(Constants.interItemOffset)
-            make.trailing.equalToSuperview().inset(Constants.horizontalOffset)
+            make.top.equalTo(passwordTextField.snp.bottom).offset(58)
+            make.trailing.equalToSuperview().inset(45)
             make.bottom.equalToSuperview()
         }
     }
