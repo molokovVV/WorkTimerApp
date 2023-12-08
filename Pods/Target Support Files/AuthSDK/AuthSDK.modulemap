@@ -1,0 +1,6 @@
+framework module AuthSDK {
+  umbrella header "AuthSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

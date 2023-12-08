@@ -12,8 +12,6 @@
 		041C55462B1E49AC00B5BBC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C55452B1E49AC00B5BBC5 /* ViewController.swift */; };
 		041C554B2B1E49AE00B5BBC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041C554A2B1E49AE00B5BBC5 /* Assets.xcassets */; };
 		041C554E2B1E49AE00B5BBC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041C554C2B1E49AE00B5BBC5 /* LaunchScreen.storyboard */; };
-		041C55592B1E525D00B5BBC5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 041C55582B1E525D00B5BBC5 /* SnapKit */; };
-		041C555B2B1E525D00B5BBC5 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 041C555A2B1E525D00B5BBC5 /* SnapKit-Dynamic */; };
 		04A3CF2F2B22103B00928791 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3CF2E2B22103B00928791 /* R.generated.swift */; };
 		DA89AA9EB601542B70EFFA10 /* Pods_WorkTimerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F1492850E5EBF0733A4099 /* Pods_WorkTimerApp.framework */; };
 /* End PBXBuildFile section */
@@ -37,8 +35,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				041C55592B1E525D00B5BBC5 /* SnapKit in Frameworks */,
-				041C555B2B1E525D00B5BBC5 /* SnapKit-Dynamic in Frameworks */,
 				DA89AA9EB601542B70EFFA10 /* Pods_WorkTimerApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,8 +143,6 @@
 			);
 			name = WorkTimerApp;
 			packageProductDependencies = (
-				041C55582B1E525D00B5BBC5 /* SnapKit */,
-				041C555A2B1E525D00B5BBC5 /* SnapKit-Dynamic */,
 			);
 			productName = WorkTimerApp;
 			productReference = 041C553E2B1E49AC00B5BBC5 /* WorkTimerApp.app */;
@@ -500,19 +494,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		041C55582B1E525D00B5BBC5 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 041C55572B1E525D00B5BBC5 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		041C555A2B1E525D00B5BBC5 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 041C55572B1E525D00B5BBC5 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 041C55362B1E49AC00B5BBC5 /* Project object */;
 }

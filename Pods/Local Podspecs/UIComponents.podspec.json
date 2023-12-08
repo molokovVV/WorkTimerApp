@@ -23,6 +23,9 @@
   "dependencies": {
     "R.swift": [
 
+    ],
+    "SnapKit": [
+
     ]
   }
 }
