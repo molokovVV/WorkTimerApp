@@ -16,7 +16,11 @@ open class WTTitleSwitchView: BaseView {
     
     private let animationTimeInterval: TimeInterval = 0.3
     
-    public var state = ActivityState.left
+    public var state = ActivityState.left {
+        didSet {
+            animateStateSetting()
+        }
+    }
     public var titles: (leftTitle: String, rightTitle: String)? = nil {
         didSet {
             leftButton.setTitle(titles?.leftTitle, for: .normal)
@@ -43,7 +47,7 @@ private extension WTTitleSwitchView {
         leftButton.addTarget(self, action: #selector(leftButtonHandler), for: .touchUpInside)
         
         leftButton.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview()
+            make.verticalEdges.equalToSuperview()
             make.leading.equalToSuperview()
         }
     }
@@ -64,26 +68,53 @@ private extension WTTitleSwitchView {
         
         rightButton.setTitleColor(.black, for: .normal)
         rightButton.addTarget(self, action: #selector(rightButtonHandler), for: .touchUpInside)
+        rightButton.alpha = 0.3
         
         
         rightButton.snp.makeConstraints { make in
             make.leading.equalTo(buttonSeparatorView.snp.trailing).offset(5)
-            make.trailing.bottom.equalToSuperview()
+            make.trailing.verticalEdges.equalToSuperview()
         }
     }
 }
 
 private extension WTTitleSwitchView {
-    func animateButtonSeparatorViewByTap() {
-        UIView.animate(withDuration: animationTimeInterval) { 
-            self.buttonSeparatorView.alpha = 0
+    
+    func animateStateSetting() {
+        let activeButton = state == .left ? rightButton : leftButton
+        let inActiveButton = state == .left ? leftButton : rightButton
+        
+        UIView.animate(withDuration: animationTimeInterval / 2) { // Reset Alpha
+            activeButton.alpha = 0.3
+            self.buttonSeparatorView.alpha = 0.3
         } completion: { _ in
-            UIView.animate(withDuration: self.animationTimeInterval) {
-                self.buttonSeparatorView.alpha = 1
+            UIView.animate(withDuration: self.animationTimeInterval) { // Set position
+                
+                inActiveButton.snp.remakeConstraints { make in
+                    make.leading.verticalEdges.equalToSuperview()
+                }
+                
+                self.buttonSeparatorView.snp.remakeConstraints { make in
+                    make.centerY.equalTo(inActiveButton)
+                    make.leading.equalTo(inActiveButton.snp.trailing).offset(5)
+                }
+                
+                activeButton.snp.remakeConstraints { make in
+                    make.leading.equalTo(self.buttonSeparatorView.snp.trailing).offset(5)
+                    make.verticalEdges.trailing.equalToSuperview()
+                }
+                
+                self.layoutIfNeeded()
+            } completion: { _ in
+                UIView.animate(withDuration: self.animationTimeInterval / 2) { // Set Alpha
+                    self.buttonSeparatorView.alpha = 1
+                    inActiveButton.alpha = 1
+                }
             }
         }
     }
 }
+
 
 public extension WTTitleSwitchView {
     enum ActivityState {
@@ -97,14 +128,14 @@ public extension WTTitleSwitchView {
     
     @IBAction func leftButtonHandler() {
         if state == .right {
-            animateButtonSeparatorViewByTap()
+            state = .left
             print("leftButtonHandler")
         }
     }
     
     @IBAction func rightButtonHandler() {
         if state == .left {
-            animateButtonSeparatorViewByTap()
+            state = .right
             print("rightButtonHandler")
         }
     }
